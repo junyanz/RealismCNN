@@ -1,7 +1,5 @@
 # RealismCNN
-## Information
-Project webpage: http://www.eecs.berkeley.edu/~junyanz/projects/realism/
-
+Project webpage: http://www.eecs.berkeley.edu/~junyanz/projects/realism/  
 Contact: Jun-Yan Zhu (junyanz at eecs dot berkeley dot edu)
 
 
