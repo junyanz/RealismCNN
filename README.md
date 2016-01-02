@@ -19,8 +19,8 @@ This is the authors' implementation of (1) visual realism prediction and (2) col
 * Download and unzip the code.
 
 * Install caffe from https://github.com/BVLC/caffe
-  - Compile both caffe and matcaffe;   
-  - Set MATCAFFE_DIR in our code "SetPaths.m"
+  - Compile both caffe and matcaffe.
+  - Set MATCAFFE_DIR in our code "SetPaths.m".
 
 * Install libsvm (included): run "make.m" if you cannot use precompiled mex files.
 
@@ -41,4 +41,4 @@ This is the authors' implementation of (1) visual realism prediction and (2) col
 * Color Adjustment:
   - **ColorAdjustmentScript.m**: reproduce color adjustment results reported in the paper.
   - **OptimizeColorAdjustment.m**: recolor a single image given a source image (i.e. object), a target image (i.e. background), and an object mask. We assume that the image sizes of source, target, and mask are the same.
-  - **ColorAdjustmetnBatch.m**: recolor multiple images by calling "OptimizeColorAdjustment.m" in batch mode
+  - **ColorAdjustmetnBatch.m**: recolor multiple images by calling "OptimizeColorAdjustment.m" in batch mode.
