@@ -1,67 +1,44 @@
 # RealismCNN
-##Information
+## Information
 Project webpage: http://www.eecs.berkeley.edu/~junyanz/projects/realism/
+
 Contact: Jun-Yan Zhu (junyanz at eecs dot berkeley dot edu)
 
 
-##Paper
-Learning a Discriminative Model for the Perception of Realism in Composite Images
-Jun-Yan Zhu, Philipp Krähenbühl, Eli Shechtman and Alexei A. Efros. 
+## Paper
+*Learning a Discriminative Model for the Perception of Realism in Composite Images*
+Jun-Yan Zhu, Philipp Krähenbühl, Eli Shechtman and Alexei A. Efros.
 IEEE International Conference on Computer Vision (ICCV). 2015.
 
 
-##Overview
+## Overview
 This is the authors' implementation of (1) visual realism prediction and (2) color adjustment methods, described in the above paper. Please cite our paper if you use our code and data for your research.
 
 
-##Installation
+## Installation
 * Download and unzip the code.
 
 * Install caffe from https://github.com/BVLC/caffe
   - Compile both caffe and matcaffe;   
   - Set MATCAFFE_DIR in our code "SetPaths.m"
 
-* Install libsvm (included): run "make.m" if you cannot use precompiled mex files. 
+* Install libsvm (included): run "make.m" if you cannot use precompiled mex files.
 
-* Download the realismCNN models and test dataset:
+* Download realismCNN models and test dataset:
   - RealismCNN models: http://www.eecs.berkeley.edu/~junyanz/projects/realism/realismCNN_models.zip    
   - For realism prediction: http://www.eecs.berkeley.edu/~junyanz/projects/realism/human_evaluation.zip  
   - For color adjustment: http://www.eecs.berkeley.edu/~junyanz/projects/realism/color_adjustment.zip  
 
-* To run our method on your own data, please modify EXPR_NAME, MODEL_DIR, DATA_DIR, WEB_DIR. See each script for further details.
+* To run our method on your own data, please modify **EXPR_NAME**, **MODEL_DIR**, **DATA_DIR**, **WEB_DIR**. See each script for further details.
 
 
-##MATLAB functions 
-* Realism Prediction: 
-  - EvaluateRealismCNN.m: apply RealismCNN model directly on human evaluation dataset. This script can reproduce RealismCNN results in Table 1. 
-  - EvaluateRealismCNN_SVM.m: train a SVM model on top of fc6/fc7 layer's features extracted by our RealismCNN model. This script can reproduce RealismCNN+SVM results in Table 1. 
-  - PredictRealism.m: Given a collection of composite images as input, this script will compute the visual realism scores for all the images, and display the top/bottom ranked images by their realism scores. 
+## MATLAB functions
+* Realism Prediction:
+  - **EvaluateRealismCNN.m**: apply RealismCNN model directly on human evaluation dataset. This script can reproduce RealismCNN results in Table 1.
+  - **EvaluateRealismCNN_SVM.m**: train a SVM model on top of fc6/fc7 layer's features extracted by our RealismCNN model. This script can reproduce RealismCNN+SVM results in Table 1.
+  - **PredictRealism.m**: Given a collection of composite images as input, this script will compute the visual realism scores for all the images, and display the top/bottom ranked images by their realism scores.
 
-* Color Adjustment: 
-  - ColorAdjustmentScript.m: reproduce color adjustment results reported in the paper. 
-  - OptimizeColorAdjustment.m: recolor a single image given a source image (i.e. object), a target image (i.e. background), and an object mask. We assume that the image sizes of source, target, and mask are the same. 
-  - ColorAdjustmetnBatch.m: recolor multiple images by calling "OptimizeColorAdjustment.m" in batch mode
-
-
-##The MIT License (MIT)
-
-Copyright (c) 2015 Jun-Yan Zhu
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
+* Color Adjustment:
+  - **ColorAdjustmentScript.m**: reproduce color adjustment results reported in the paper.
+  - **OptimizeColorAdjustment.m**: recolor a single image given a source image (i.e. object), a target image (i.e. background), and an object mask. We assume that the image sizes of source, target, and mask are the same.
+  - **ColorAdjustmetnBatch.m**: recolor multiple images by calling "OptimizeColorAdjustment.m" in batch mode
