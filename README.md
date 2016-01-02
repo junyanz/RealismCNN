@@ -6,9 +6,9 @@ Contact: Jun-Yan Zhu (junyanz at eecs dot berkeley dot edu)
 
 
 ## Paper
-*Learning a Discriminative Model for the Perception of Realism in Composite Images*
-Jun-Yan Zhu, Philipp Krähenbühl, Eli Shechtman and Alexei A. Efros.
-IEEE International Conference on Computer Vision (ICCV). 2015.
+Learning a Discriminative Model for the Perception of Realism in Composite Images  
+Jun-Yan Zhu, Philipp Krähenbühl, Eli Shechtman and Alexei A. Efros.  
+IEEE International Conference on Computer Vision (ICCV). 2015.  
 
 
 ## Overview
