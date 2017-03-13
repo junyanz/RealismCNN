@@ -66,7 +66,7 @@ for n = 1 : nImgs
     ims{1} = fullfile(outImgFold, [name '_mask.png']); 
     copyfile(maskList{n}, fullfile(webFold, ims{1})); 
     ims{2} = fullfile(outImgFold, [name '_cut_and_paste.png']);
-    ims{3} = fullfile(outImgFold, [name ext '.png']); 
+    ims{3} = fullfile(outImgFold, [name opts.EXT '.png']); 
     html = htmlAddTitle(html, sprintf('image name = %s', name));
     html = htmlAddTable(html); 
     html = htmlAddImages(html, ims, txts, ims, 256);
