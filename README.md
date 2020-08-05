@@ -35,11 +35,11 @@ This is the authors' implementation of (1) visual realism prediction and (2) col
 * Realism Prediction:
   - `EvaluateRealismCNN.m`: apply RealismCNN model directly on human evaluation dataset. This script can reproduce RealismCNN results in Table 1.
   - `EvaluateRealismCNN_SVM.m`: train an SVM model on top of fc6/fc7 layer's features extracted by our RealismCNN model. This script can reproduce RealismCNN+SVM results in Table 1.
-  - `PredictRealism.m`: Given a collection of composite images, this script will compute the visual realism scores for all the images, and display the top/bottom-ranked images by their realism scores.
+  - `PredictRealism.m`: Given a collection of composite images, we use this script to compute the visual realism scores for all the images, and display the top/bottom-ranked images by their realism scores.
 
 * Color Adjustment:
   - `ColorAdjustmentScript.m`: reproduce color adjustment results reported in the paper.
-  - `OptimizeColorAdjustment.m`: recolor a single image given a source image (i.e. object), a target image (i.e. background), and an object mask. We assume that the image sizes of source, target, and mask are the same.
+  - `OptimizeColorAdjustment.m`: recolor a single image given a source image (i.e., object), a target image (i.e., background), and an object mask. We assume that the image sizes of source, target, and mask are the same.
   - `ColorAdjustmetnBatch.m`: recolor multiple images by calling "OptimizeColorAdjustment.m" in batch mode.
 
 
