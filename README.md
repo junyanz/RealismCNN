@@ -1,12 +1,12 @@
 # RealismCNN
-#### [[Project](http://efrosprojects.eecs.berkeley.edu/realism/)] [[Paper](https://arxiv.org/abs/1510.00477)]
+#### [Project](http://efrosprojects.eecs.berkeley.edu/realism/) | [Paper](https://arxiv.org/abs/1510.00477)
 
-Contact: Jun-Yan Zhu (junyanz at mit dot edu)
+Contact: Jun-Yan Zhu (junyanz at cs dot cmu dot edu)
 
 
 ## Paper
 Learning a Discriminative Model for the Perception of Realism in Composite Images  
-Jun-Yan Zhu, Philipp Krähenbühl, Eli Shechtman and Alexei A. Efros  
+[Jun-Yan Zhu](https://www.cs.cmu.edu/~junyanz/), [Philipp Krähenbühl](https://www.philkr.net/), [Eli Shechtman](https://research.adobe.com/person/eli-shechtman/) and [Alexei A. Efros](https://people.eecs.berkeley.edu/~efros/)  
 IEEE International Conference on Computer Vision (ICCV). 2015.  
 
 
@@ -41,3 +41,15 @@ This is the authors' implementation of (1) visual realism prediction and (2) col
   - `ColorAdjustmentScript.m`: reproduce color adjustment results reported in the paper.
   - `OptimizeColorAdjustment.m`: recolor a single image given a source image (i.e. object), a target image (i.e. background), and an object mask. We assume that the image sizes of source, target, and mask are the same.
   - `ColorAdjustmetnBatch.m`: recolor multiple images by calling "OptimizeColorAdjustment.m" in batch mode.
+
+
+### Citation
+If you use this code for your research, please cite our papers.
+```
+@inproceedings{zhu2015learning,
+  title={Learning a Discriminative Model for the Perception of Realism in Composite Images},
+  author={Zhu, Jun-Yan and Kr{\"a}henb{\"u}hl, Philipp and Shechtman, Eli and Efros, Alexei A.},
+  booktitle={IEEE International Conference on Computer Vision (ICCV)},
+  year={2015}
+}
+```
